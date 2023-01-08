@@ -1,0 +1,115 @@
+.booking-wrapper {
+  padding: 35px;
+}
+.booking-text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  color: #242731;
+}
+.filters {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  height: 44px;
+}
+.dropdowns {
+  display: flex;
+  flex-grow: 1;
+  gap: 16px;
+}
+.dropdown {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 23px;
+
+  background: #ffffff;
+  border-radius: 22.5px;
+}
+.settings {
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+  gap: 16px;
+}
+.car-cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 24px;
+}
+.car-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 10px;
+  width: 28.7%;
+  background: #ffffff;
+  border-radius: 16px;
+}
+.car-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.heart {
+  margin-left: auto;
+}
+.car-title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #242731;
+}
+.car-subtitle {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #72767c;
+}
+.car-details {
+  display: flex;
+  gap: 20px;
+}
+.car-detail {
+  display: flex;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #72767c;
+  gap: 5px;
+}
+.price {
+  display: flex;
+  margin-left: auto;
+}
+.price-value {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #242731;
+}
+.price-text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #aaaaaa;
+}

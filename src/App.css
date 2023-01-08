@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.main-wrapper {
+  display: flex;
+  height: 100%;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.content {
+  background: #f5f5f5;
+  flex-grow: 1;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
