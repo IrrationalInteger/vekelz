@@ -11,12 +11,31 @@ import recommendIcon from "../assets/recommend icon.svg";
 import manualgreyIcon from "../assets/manual grey icon.svg";
 import cogIcon from "../assets/cog icon.svg";
 import electricIcon from "../assets/electric icon.svg";
+import Chart from "./Chart";
+import Histogram from "./Histogram";
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 function Dashboard() {
   const [hoveringEnergy, setHoveringEnergy] = useState(false);
   const [hoveringRange, setHoveringRange] = useState(false);
   const [hoveringFluid, setHoveringFluid] = useState(false);
   const [hoveringWear, setHoveringWear] = useState(false);
+  const [unit, setUnit] = useState("day");
+  const [unit2, setUnit2] = useState("day");
 
   return (
     <div className="dashboard-wrapper">
@@ -156,8 +175,141 @@ function Dashboard() {
         </div>
       </div>
       <div className="dashboard-row-container">
-        <div className="dashboard-card"></div>
-        <div className="dashboard-card"></div>
+        <div
+          className="dashboard-card"
+          style={{
+            width: "50%",
+            height: "400px",
+            alignItems: "normal",
+            cursor: "default",
+          }}
+        >
+          <div className="chart-histogram-header">
+            <p className="car-miles-text ">Miles</p>
+            <p className="statistics-text">Statistics</p>
+          </div>
+
+          <div className="date-row">
+            <div className="button-group" style={{ marginLeft: "0px" }}>
+              <button
+                className="unit-button"
+                style={
+                  unit2 === "day"
+                    ? { backgroundColor: "#2884FF", color: "#FFF" }
+                    : undefined
+                }
+                onClick={() => setUnit2("day")}
+              >
+                Day
+              </button>
+              <button
+                className="unit-button"
+                style={
+                  unit2 === "week"
+                    ? { backgroundColor: "#2884FF", color: "#FFF" }
+                    : undefined
+                }
+                onClick={() => setUnit2("week")}
+              >
+                Week
+              </button>
+              <button
+                className="unit-button"
+                style={
+                  unit2 === "month"
+                    ? { backgroundColor: "#2884FF", color: "#FFF" }
+                    : undefined
+                }
+                onClick={() => setUnit2("month")}
+              >
+                {" "}
+                Month
+              </button>
+            </div>
+            <p className="date-miles-text" style={{ marginLeft: "auto" }}>
+              {unit2 === "day"
+                ? "256 Miles"
+                : unit2 === "week"
+                ? "1500 Miles"
+                : "10000 Miles"}
+            </p>
+          </div>
+          {unit2 === "day" && <Histogram unit="day"></Histogram>}
+          {unit2 === "week" && <Histogram unit="week"></Histogram>}
+          {unit2 === "month" && <Histogram unit="month"></Histogram>}
+          <div className="timeline">
+            {new Array(8)
+              .map((item, idx) => new Date().getDate() - idx)
+              .join("    ")}
+          </div>
+        </div>
+        <div
+          className="dashboard-card"
+          style={{
+            width: "50%",
+            height: "400px",
+            alignItems: "normal",
+            cursor: "default",
+          }}
+        >
+          <div className="chart-histogram-header">
+            <p className="car-miles-text ">Car</p>
+            <p className="statistics-text">Statistics</p>
+          </div>
+          <div className="date-row">
+            <p className="date-miles-text">
+              {new Date().getDate() +
+                " " +
+                months[new Date().getMonth()] +
+                " " +
+                new Date().getFullYear()}
+            </p>
+            <div className="button-group">
+              <button
+                className="unit-button"
+                style={
+                  unit === "day"
+                    ? { backgroundColor: "#FF764C", color: "#FFF" }
+                    : undefined
+                }
+                onClick={() => setUnit("day")}
+              >
+                Day
+              </button>
+              <button
+                className="unit-button"
+                style={
+                  unit === "week"
+                    ? { backgroundColor: "#FF764C", color: "#FFF" }
+                    : undefined
+                }
+                onClick={() => setUnit("week")}
+              >
+                Week
+              </button>
+              <button
+                className="unit-button"
+                style={
+                  unit === "month"
+                    ? { backgroundColor: "#FF764C", color: "#FFF" }
+                    : undefined
+                }
+                onClick={() => setUnit("month")}
+              >
+                {" "}
+                Month
+              </button>
+            </div>
+          </div>
+          {unit === "day" && <Chart unit="day"></Chart>}
+          {unit === "week" && <Chart unit="week"></Chart>}
+          {unit === "month" && <Chart unit="month"></Chart>}
+          <div className="timeline">
+            {new Array(8)
+              .map((item, idx) => new Date().getDate() - idx)
+              .join("    ")}
+          </div>
+        </div>
       </div>
       <div className="dashboard-row-container">
         {recommendations.map((recommendation, idx) => (

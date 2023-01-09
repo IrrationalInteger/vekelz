@@ -130,7 +130,7 @@
   background-color: white;
   padding: 20px 51px;
   gap: 15px;
-  width: 20%;
+  width: 30%;
   height: 221px;
   border-radius: 14px;
   cursor: pointer;
@@ -138,7 +138,7 @@
 .dashboard-car-card {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
   padding: 15px 27px;
   gap: 10px;
   background: #e1dfa4;
@@ -184,4 +184,74 @@
 }
 .right {
   margin-left: auto;
+}
+.chart-histogram-header {
+  display: flex;
+  gap: 5px;
+}
+.car-miles-text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #242731;
+}
+.statistics-text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #242731;
+}
+.date-miles-text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #5f6165;
+}
+.date-row {
+  display: flex;
+  align-items: center;
+}
+.timeline {
+  display: flex;
+  gap: 20px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #808191;
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px;
+  gap: 8px;
+  width: 200px;
+  height: 25px;
+  background: #f5f4f6;
+  border-radius: 10px;
+  margin-left: auto;
+}
+.unit-button {
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  color: #5f6165;
+  cursor: pointer;
 }
