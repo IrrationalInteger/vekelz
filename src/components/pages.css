@@ -113,3 +113,75 @@
   line-height: 23px;
   color: #aaaaaa;
 }
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 35px;
+}
+.dashboard-row-container {
+  display: flex;
+  gap: 20px;
+}
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px 51px;
+  gap: 15px;
+  width: 20%;
+  height: 221px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.dashboard-car-card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 15px 27px;
+  gap: 10px;
+  background: #e1dfa4;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.dashboard-card-text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #242731;
+}
+.dashboard-card-recommend {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #242731;
+}
+.dashboard-card-title {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #1f2128;
+}
+.dashboard-card-details {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+.dashboard-card-detail {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #72767c;
+}
+.right {
+  margin-left: auto;
+}

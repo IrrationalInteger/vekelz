@@ -1,9 +1,9 @@
 import "./App.css";
-import Booking from "./pages/booking";
-import Dashboard from "./pages/dashboard";
+import Booking from "./components/Booking";
+import Dashboard from "./components/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./layouts/sidebar";
-import Header from "./layouts/header";
+import Sidebar from "./layouts/Sidebar";
+import Header from "./layouts/Header";
 
 function App() {
   return (
